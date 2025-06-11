@@ -2,7 +2,7 @@ public class TablePrint {
 
     public static void main(String[] args) {
         int a=9;
-        
+
 
         System.out.printf("Multiplication Table for 9\n");
         System.out.printf("%d x %d = %d\n",a,1,a*1);
