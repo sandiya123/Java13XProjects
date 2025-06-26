@@ -1,1 +1,28 @@
+public class StringComparisonDemo {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "hello";
+        String s3 = "Hello";
+       
 
+
+       
+
+        //Using equals() method (compares values, case-sensitive)
+      
+        System.out.println("s1.equals(s2): " + s1.equals(s2));  // false
+        System.out.println("s1.equals(s3): " + s1.equals(s3));  // true
+       
+
+        // Using equalsIgnoreCase() method (case-insensitive comparison)
+        
+        System.out.println("s1.equalsIgnoreCase(s4): " + s1.equalsIgnoreCase(s4));  // true
+        System.out.println();
+
+        // Using compareTo() method (lexicographic comparison)
+        
+        System.out.println("s1.compareTo(s2): " + s1.compareTo(s2));  // 0 (equal)
+        System.out.println("s1.compareTo(s3): " + s1.compareTo(s4));  // negative or positive value depending on lex order
+      
+    }
+}
