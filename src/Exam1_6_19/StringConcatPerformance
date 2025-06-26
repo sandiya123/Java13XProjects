@@ -1,1 +1,34 @@
+public class StringConcatPerformance {
+    private static final int ITERATIONS = 1000;
 
+    public static void main(String[] args) {
+        
+        long startTime = System.currentTimeMillis();
+        String s = "";
+        for (int i = 0; i < ITERATIONS; i++) {
+            s += "a";
+        }
+        long endTime = System.currentTimeMillis();
+        System.out.println("String concatenation with + took: " + (endTime - startTime) + " ms");
+
+        // Measure performance of StringBuilder
+        startTime = System.currentTimeMillis();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < ITERATIONS; i++) {
+            sb.append("a");
+        }
+        String resultSB = sb.toString();
+        endTime = System.currentTimeMillis();
+        System.out.println("StringBuilder.append() took: " + (endTime - startTime) + " ms");
+
+        // Measure performance of StringBuffer
+        startTime = System.currentTimeMillis();
+        StringBuffer sbuf = new StringBuffer();
+        for (int i = 0; i < ITERATIONS; i++) {
+            sbuf.append("a");
+        }
+        String resultSBuf = sbuf.toString();
+        endTime = System.currentTimeMillis();
+        System.out.println("StringBuffer.append() took: " + (endTime - startTime) + " ms");
+    }
+}
