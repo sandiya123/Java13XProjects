@@ -1,1 +1,24 @@
+public class StrOperations {
+    public static void main(String[] args) {
+        // 1. String concatenation
+        String firstName = "sandhya";
+        String lastName = "mukalla";
+        String fullName = firstName + " " + lastName;
+        System.out.println("Full Name: " + fullName);
 
+        // 2. String length
+        int length = fullName.length();
+        System.out.println("Length of full name: " + length);
+
+        // 3. Substring extraction
+        String firstNameExtracted = fullName.substring(0, firstName.length());
+        System.out.println("Extracted First Name: " + firstNameExtracted);
+
+        // 4. Character extraction
+        char firstChar = fullName.charAt(0);
+        System.out.println("First character of full name: " + firstChar);
+
+        char lastChar = fullName.charAt(fullName.length() - 1);
+        System.out.println("Last character of full name: " + lastChar);
+    }
+}
